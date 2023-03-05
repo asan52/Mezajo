@@ -7,3 +7,6 @@ net user irdina /active:yes >nul
 net user installer /delete
 diskperf -Y >nul
 sc config Audiosrv start= auto >nul
+sc start audiosrv >nul
+ICACLS C:\Windows\Temp /grant irdina:F >nul
+ICACLS C:\Windows\installer /grant irdina:F >nul
